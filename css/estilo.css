@@ -1,0 +1,54 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+   
+}
+
+#app {
+    background-color: #f4a261;
+    padding: 20px;
+    text-align: center;
+}
+
+input[type="range"].range-green {
+    accent-color: #0ee970; /* Verde */
+}
+
+input[type="range"].range-orange {
+    accent-color: #f4a261; /* Naranja */
+}
+
+input[type="range"].range-red {
+    accent-color: #d62727; /* Rojo */
+}
+
+button {
+    padding: 5px 10px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #2a9d8f;
+    color: white;
+}
+
+h2 {
+    font-size: 24px;
+    margin: 10px 0;
+    color: #264653;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+li {
+    cursor: pointer;
+}
+
+.completada {
+    text-decoration: line-through;
+    color: gray;
+}

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Tareas</title>
+    <link rel="stylesheet" href="./css/estilo.css">
+</head>
+<body>
+    <section id="app">
+        <h2>Vue</h2>
+        <p class="parrafo">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos, eligendi odit, veniam repudiandae
+            nihil error unde vel quam ducimus consequuntur eius nesciunt quisquam atque, optio mollitia
+            autem voluptatum voluptate! Veritatis?
+        </p>
+        <br>
+
+        <input type="text" placeholder="Hola">
+
+        <article>
+            <button @click="incrementar" :disabled="cantidad >= 100">+</button>
+            <button @click="disminuir" :disabled="cantidad <= 1">-</button>
+            <br>
+            <label for="customRange2" class="form-label">{{ cantidad }}</label>
+            <input type="range" 
+                   class="form-range" 
+                   min="1" 
+                   max="100" 
+                   v-model="cantidad" 
+                   id="customRange2"
+                   :class="rangeColorClass">
+        </article>
+
+        <article>
+            <ul>
+                <li v-for="(valor, index) in mensajes" 
+                    :key="index" 
+                    :class="{ completada: valor.estado === 'true' }" 
+                    @click="toggleEstado(index)">
+                    {{ valor.accion }} : {{ valor.estado }}
+                </li>
+            </ul>
+            <p>Tareas completadas: {{ cuantosMensajes() }}</p>
+        </article>
+
+        <h2>Regina Ruiz González</h2>
+    </section>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue@3"></script>
+    <script src="./js/script.js"></script>
+</body>
+</html>
